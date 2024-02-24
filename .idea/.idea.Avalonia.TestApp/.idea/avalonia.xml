@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AvaloniaProject">
+    <option name="projectPerEditor">
+      <map>
+        <entry key="Avalonia.TestApp/App.axaml" value="Avalonia.TestApp/Avalonia.TestApp.csproj" />
+        <entry key="Avalonia.TestApp/Styles1.axaml" value="Avalonia.TestApp/Avalonia.TestApp.csproj" />
+        <entry key="Avalonia.TestApp/Views/MainWindow.axaml" value="Avalonia.TestApp/Avalonia.TestApp.csproj" />
+        <entry key="Avalonia.TestApp/icons.axaml" value="Avalonia.TestApp/Avalonia.TestApp.csproj" />
+      </map>
+    </option>
+  </component>
+</project>
