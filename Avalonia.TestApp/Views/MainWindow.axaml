@@ -10,11 +10,35 @@
         Title="Avalonia.TestApp"
         ExtendClientAreaToDecorationsHint="True">
 
-    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,20,0,0">
-        <Button Content="Button 1" Margin="5"/>
-        <Button Content="Button 2" Margin="5"/>
-        <Button Content="Button 3" Margin="5"/>
-    </StackPanel>
+    <SplitView IsPaneOpen="True">
+        <SplitView.Pane>
+            <StackPanel Background="Gray" Width="210" HorizontalAlignment="Left">
+                <Button Content="Button 1" Margin="5"/>
+                <Button Content="Button 2" Margin="5"/>
+                <Button Content="Button 3" Margin="5"/>
+                <Button>
+                    <Button.Content>
+                        <Image Source="C:\Users\Ян\RiderProjects\Avalonia.TestApp\Avalonia.TestApp\Assets\btn1.jpg" Width="200" Height="80" Stretch="Fill"/>
+                    </Button.Content>
+                </Button>
+                <Button Content="Close Pane" Click="ClosePane_Click"></Button>
+            </StackPanel>
+        </SplitView.Pane>
+        
+        <SplitView.Content>
+            <Grid>
+                <Rectangle Fill="Black" Opacity="0.8"></Rectangle>
+                <TextBlock Text="Honkai Helper"
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Top" 
+                           Margin="30"
+                           FontFamily="Segoe UI"
+                           FontSize="30"/>
+            </Grid>
+        </SplitView.Content>
+        
+    </SplitView>
+    
     
     <Window.Styles>
         <Style Selector="Window">
@@ -32,9 +56,9 @@
         <vm:MainWindowViewModel/>
     </Design.DataContext>
     
-    <Window.OpacityMask>
-        <SolidColorBrush Color="Black" Opacity="0.5"/>
-    </Window.OpacityMask>
+    
+    
+    
     
    
     

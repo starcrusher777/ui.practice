@@ -14,6 +14,10 @@ public partial class MainWindow : Window
         InitializeComponent();
         //_notificationManager = new WindowNotificationManager(this);
     }
+    private void ClosePane_Click(object? sender, RoutedEventArgs routedEventArgs)
+    {
+        //MySplitView.IsPaneOpen = true;
+    }
 
     //public void buttonClick(object? sender, RoutedEventArgs routedEventArgs)
     //{
