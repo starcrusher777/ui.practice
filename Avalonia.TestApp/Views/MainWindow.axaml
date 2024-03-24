@@ -8,9 +8,23 @@
         x:DataType="vm:MainWindowViewModel"
         Icon="/Assets/avalonia-logo.ico"
         Title="Avalonia.TestApp"
-        Background="Transparent"
-        TransparencyLevelHint="AcrylicBlur"
         ExtendClientAreaToDecorationsHint="True">
+
+    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,20,0,0">
+        <Button Content="Button 1" Margin="5"/>
+        <Button Content="Button 2" Margin="5"/>
+        <Button Content="Button 3" Margin="5"/>
+    </StackPanel>
+    
+    <Window.Styles>
+        <Style Selector="Window">
+            <Setter Property="Background">
+                <Setter.Value>
+                    <ImageBrush Source="C:\Users\Ян\RiderProjects\Avalonia.TestApp\Avalonia.TestApp\Assets\bg.jpg" Stretch="UniformToFill"/>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Styles>
 
     <Design.DataContext>
         <!-- This only sets the DataContext for the previewer in an IDE,
@@ -18,27 +32,10 @@
         <vm:MainWindowViewModel/>
     </Design.DataContext>
     
-    <Panel Margin="40">
-        <ExperimentalAcrylicBorder IsHitTestVisible="False">
-            <ExperimentalAcrylicBorder.Material>
-                <ExperimentalAcrylicMaterial
-                    BackgroundSource="Digger"
-                    TintColor="Black"
-                    TintOpacity="0.5"
-                    MaterialOpacity="0.65">
-                </ExperimentalAcrylicMaterial>
-            </ExperimentalAcrylicBorder.Material>
-        </ExperimentalAcrylicBorder>
-        
-        <Button
-            VerticalAlignment="Top"
-            HorizontalAlignment="Right"
-            Command="{Binding BuyMusicCommand}">
-            <PathIcon Data="{StaticResource store_microsoft_regular}"></PathIcon>
-            
-        </Button>
-    </Panel>
-
+    <Window.OpacityMask>
+        <SolidColorBrush Color="Black" Opacity="0.5"/>
+    </Window.OpacityMask>
     
-
-</Window>
+   
+    
+    </Window>
